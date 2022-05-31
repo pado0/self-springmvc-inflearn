@@ -44,6 +44,7 @@ public class RequestBodyJsonController {
 
     // 객체를 바로 넣음. Objectmapper 사용 x
     // http message 컨버터는 json도 객체로 바꿔준다
+    // @RequestBody 생략하면 @ModelAttribute가 되므로 바디를 못읽어옴 생략금지.
     @ResponseBody
     @PostMapping("/request-body-json-v3")
     public String requestBodyJsonV3(@RequestBody HelloData data) {
